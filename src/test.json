@@ -1,0 +1,18 @@
+{
+    user: "Marcin K.",
+    answers: {
+        question1: true,
+        question2: false,
+        question3: true,
+        question4: true,
+        question5: true
+    },
+    weight: {
+        question1: 1,
+        question2: 10,
+        question3: 1,
+        question4: 2,
+        question5: 4
+    },
+    dateAnswerd: '01-01-2018'
+}
