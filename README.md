@@ -5,16 +5,21 @@
 All questions are in Polish.
 
 ### Get started
-To install type:
+fork repo, then type in terminal: 
 
-> npm i
+`npm i`
 
-> npm start
+then 
+
+`npm start`
+
+go to localhost:3000
+
 
 To do:
-1. rwd 
-2. to connect results to database
-3. more questions, categories
-4. redux (main goal)
+- [ ] rwd
+- [ ] to connect results to database
+- [ ] more questions, categories
+- [ ] redux(main goal, learning now)
 
 
