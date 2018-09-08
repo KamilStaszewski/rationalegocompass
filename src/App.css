@@ -15,12 +15,6 @@ body {
   color: #fff;
 }
 
-.compass {
-  display: flex;
-  justify-content: center;
-  padding: 50px;
-}
-
 
 h3 {
     font-family: 'Donegal One', sans-serif;
@@ -61,26 +55,6 @@ button[disabled]{
   border: 2px solid #999999;
   background-color: #cccccc;
   color: #666666;
-}
-
-.answerBtn:after {
-  content: "";
-  background: #94DBE0;
-  display: block;
-  position: absolute;
-  padding-top: 300%;
-  padding-left: 350%;
-  margin-left: -20px!important;
-  margin-top: -120%;
-  opacity: 0;
-  transition: all 0.9s
-}
-
-.answerBtn:active:after {
-  padding: 0;
-  margin: 0;
-  opacity: 1;
-  transition: 0s
 }
 
 .buttonNext {

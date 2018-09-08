@@ -130,13 +130,13 @@ class Answers extends Component {
                         <h3 className={style}>{this.props.questions[this.state.index].question}</h3>
                         <div className={css(styles.buttons_container)}>
                             <button onClick={this.handleYes}
-                                className="answerBtn"
+                                className={css(styles.answerBtn)}
                                 disabled={this.state.disableBtn}>Zgadzam się</button>
                             <button onClick={this.handleNo}
-                                className="answerBtn"
+                                className={css(styles.answerBtn)}
                             disabled={this.state.disableBtn}>Nie zgadzam się</button>
                         </div>
-                        <div className="compass">
+                        <div className={css(styles.compass)}>
                             <label for="volume" className="input-range">Jak istotna jest dla Ciebie ta kwestia?</label>
                             <input type="range"
                                 name={`points${this.state.index + 1}`} 
@@ -184,6 +184,31 @@ const styles = StyleSheet.create({
     buttons_container: {
         display: 'flex',
         justifyContent: 'center' 
+    },
+    answerBtn: {
+        ':after': {
+            content: "",
+            background: '#94DBE0',
+            display: 'block',
+            position: 'absolute',
+            paddingTop: `300%`,
+            paddingLeft: `350%`,
+            marginLeft: `-20px!important`,
+            marginTop: `-120%`,
+            opacity: 0,
+            transition: `all 0.9s`
+        },
+        ':active:after': {
+            padding: 0,
+            margin: 0,
+            opacity: 1,
+            transition: '0s'
+        }
+    },
+    compass: {
+        display: 'flex',
+        justifyContent: 'center',
+        padding: 50
     }
   });
 
