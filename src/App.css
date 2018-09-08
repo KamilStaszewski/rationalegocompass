@@ -15,58 +15,12 @@ body {
   color: #fff;
 }
 
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-
-.App {
-  height: 100vh;
-  width: 100vw;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  animation: fadeIn 1s;
-}
-
-.result {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-}
-
 .compass {
   display: flex;
   justify-content: center;
   padding: 50px;
 }
 
-.buttons__container {
-  display: flex;
-  justify-content: center; 
-}
-
-h1 {
-  font-family: 'Pontano Sans', sans-serif;
-  text-align: center;
-  transition-duration: 2s;
-  transition: all 2s;
-  font-size: 40px;
-}
-
-h2 {
-  font-family: 'Donegal One', sans-serif;
-  text-align: center;
-  padding: 30px;
-  padding-bottom: 0px;
-  font-size: 20px;
-}
 
 h3 {
     font-family: 'Donegal One', sans-serif;
@@ -226,12 +180,6 @@ a {
   text-decoration: none;
 }
 
-.start {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-}
 
 .link {
   display: flex;

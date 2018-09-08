@@ -115,21 +115,20 @@ class Answers extends Component {
             if (this.state.styleNext) {
               style = css(qstyles.fadeIn);
             }
-            console.log(this.state.styleNext)
         return (
-            <div className="App">
+            <div>
                 {this.props.questions.length === this.state.index ?
-                    <div className="result">
+                    <div className={css(styles.start)}>
                         <Result scoreEgo={scoreEgo} 
                                 scoreMind={scoreMind}
                                 />
                     </div>
                     :
                     <div>
-                        <h1 style={{textTransform: 'uppercase', paddingTop: 30}}>Rational Ego Compass</h1>
-                        <h2>{this.state.index+1}/{this.props.questions.length}</h2>
+                        <h1 className={css(styles.h1)}>Rational Ego Compass</h1>
+                        <h2 className={css(styles.h2)}>{this.state.index+1}/{this.props.questions.length}</h2>
                         <h3 className={style}>{this.props.questions[this.state.index].question}</h3>
-                        <div className="buttons__container">
+                        <div className={css(styles.buttons_container)}>
                             <button onClick={this.handleYes}
                                 className="answerBtn"
                                 disabled={this.state.disableBtn}>Zgadzam się</button>
@@ -158,6 +157,35 @@ class Answers extends Component {
         )
     }
 }
+
+const styles = StyleSheet.create({
+    result: {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: `100%`
+    },
+    h1: {
+        fontFamily: `Pontano Sans, sans-serif`,
+        textAlign: 'center',
+        transitionDuration: `2s`,
+        transition: `all 2s`,
+        fontSize: 40,
+        textTransform: 'uppercase', 
+        paddingTop: 30
+    },
+    h2:{
+        fontFamily: `Donegal One, sans-serif`,
+        textAlign: 'center',
+        padding: 30,
+        paddingBottom: 0,
+        fontSize: 20
+    },
+    buttons_container: {
+        display: 'flex',
+        justifyContent: 'center' 
+    }
+  });
 
 
 function getAnswers(data) {
