@@ -1,15 +1,14 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import './App.scss';
 import Home from './Components/Home';
-import List from './Components/List';
+import Quiz from './Components/Quiz';
 
 
 const App = () => (
-  <div>
+  <div className="app">
     <Switch>
       <Route exact path='/' component={Home}/>
-      <Route path='/list' component={List}/>
+      <Route path='/quiz' component={Quiz}/>
     </Switch>
   </div>
 )
