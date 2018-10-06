@@ -4,8 +4,5 @@
       "/route": {
         "origin": "url"
       }
-    },
-    "routes": {
-        "/**": "index.html"
-      }
+    }
   }
