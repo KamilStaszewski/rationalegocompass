@@ -28,16 +28,24 @@ class Quiz extends Component {
   }
 
   answerYes = () => {
-    const { questions, index } = this.state;
-    console.log(questions)
+    const { questions, index, scoreEgo, scoreMind } = this.state;
     this.setState({
-      scoreEgo: this.state.scoreEgo + questions[index].egoYes
+      scoreEgo: scoreEgo + questions[index].egoYes,
+      scoreMind: scoreMind + questions[index].mindYes
+    })
+  }
+
+  answerNo = () => {
+    const { questions, index, scoreEgo, scoreMind } = this.state;
+    this.setState({
+      scoreEgo: scoreEgo - questions[index].egoYes,
+      scoreMind: scoreMind - questions[index].mindYes
     })
   }
 
   render() {
     const { questions, index } = this.state;
-    console.log(this.state.scoreEgo)
+    console.log(this.state)
     return (
       <div className="wrapper">
         {questions.length ? (
@@ -45,7 +53,7 @@ class Quiz extends Component {
           <p>{questions[index].question}</p>
           <div className="quiz__buttons">
             <button onClick={this.answerYes}>Zgadzam się</button>
-            <button>Nie zgadzam się</button>
+            <button onClick={this.answerNo}>Nie zgadzam się</button>
           </div>
           <input type="range" name="" id=""/>
           <div className="quiz__nextquestion">
