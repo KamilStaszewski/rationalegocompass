@@ -1,4 +1,0 @@
-1. usystematyzowac css który juz napisalem,
-2. uzyc sassa czy czegos, podzielic css na komponenty 
-3. ogarnąc h3 z pytaniem bo coś nie tak będzie
-4. w app.css będa basicowe style, które będą modyfikowane przez inline
