@@ -33,12 +33,12 @@ class Quiz extends Component {
       <div className="wrapper">
         {questions.length ? (
         <div className="quiz">
-          <div className="quiz__questions">
-            <p>{questions[index].question}</p>
+          <p>{questions[index].question}</p>
+          <div className="quiz__buttons">
+            <button>1</button>
+            <button>2</button>
           </div>
-          <div className="quiz__input">
-            <input type="range" name="" id=""/>
-          </div>
+          <input type="range" name="" id=""/>
           <div className="quiz__nextquestion">
             <button onClick={this.nextQuestion}>Next question</button>
           </div>
