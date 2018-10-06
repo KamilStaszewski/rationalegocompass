@@ -9,6 +9,13 @@ export default class Quiz extends Component {
          index: 0
       }
     }
+
+    componentDidMount = () => {
+      fetch('/api/getList')
+        .then(res => res.json())
+        .then(list => this.setState({ list }))
+    }
+    
     
     nextQuestion = () => {
       this.setState({
@@ -18,6 +25,7 @@ export default class Quiz extends Component {
     
 
   render() {
+    console.log(this.state.list)
       let { index } = this.state      
     return (
       <div className="wrapper">
