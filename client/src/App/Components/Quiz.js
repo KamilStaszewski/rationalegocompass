@@ -27,16 +27,25 @@ class Quiz extends Component {
     })
   }
 
+  answerYes = () => {
+    const { questions, index } = this.state;
+    console.log(questions)
+    this.setState({
+      scoreEgo: this.state.scoreEgo + questions[index].egoYes
+    })
+  }
+
   render() {
     const { questions, index } = this.state;
+    console.log(this.state.scoreEgo)
     return (
       <div className="wrapper">
         {questions.length ? (
         <div className="quiz">
           <p>{questions[index].question}</p>
           <div className="quiz__buttons">
-            <button>1</button>
-            <button>2</button>
+            <button onClick={this.answerYes}>Zgadzam się</button>
+            <button>Nie zgadzam się</button>
           </div>
           <input type="range" name="" id=""/>
           <div className="quiz__nextquestion">
