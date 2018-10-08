@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import QuizButtons from '../Components/QuizButtons';
+import QuizHeader from '../Components/QuizHeader';
+import QuizNextQuestionButton from '../Components/QuizNextQuestionButton';
 
 class Quiz extends Component {
   constructor(props){
@@ -50,15 +53,10 @@ class Quiz extends Component {
       <div className="wrapper">
         {questions.length ? (
         <div className="quiz">
-          <p>{questions[index].question}</p>
-          <div className="quiz__buttons">
-            <button onClick={this.answerYes}>Zgadzam się</button>
-            <button onClick={this.answerNo}>Nie zgadzam się</button>
-          </div>
+          <QuizHeader questions={questions} index={index}/>
+          <QuizButtons answerYes={this.answerYes} answerNo={this.answerNo}/>
           <input type="range" name="" id=""/>
-          <div className="quiz__nextquestion">
-            <button onClick={this.nextQuestion}>Next question</button>
-          </div>
+          <QuizNextQuestionButton nextQuestion={this.nextQuestion}/>
         </div>
         ) : (
           null

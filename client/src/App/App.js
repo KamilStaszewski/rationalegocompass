@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import Home from './Components/Home';
-import Quiz from './Components/Quiz';
+import Home from './Pages/Home';
+import Quiz from './Pages/Quiz';
 
 
 const App = () => (
