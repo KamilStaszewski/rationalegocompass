@@ -1,10 +1,10 @@
 import React from 'react'
 
-const QuizButtons = ({answerYes, answerNo}) => {
+const QuizButtons = ({answerYes, answerNo, disableButton}) => {
   return (
     <div className="quiz__buttons">
-        <button onClick={answerYes}>Zgadzam się</button>
-        <button onClick={answerNo}>Nie zgadzam się</button>
+        <button onClick={answerYes} disabled={disableButton}>Zgadzam się</button>
+        <button onClick={answerNo} disabled={disableButton}>Nie zgadzam się</button>
     </div>
   )
 }
