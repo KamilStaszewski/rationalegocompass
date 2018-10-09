@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../../../node_modules/react-vis/dist/style.css';
 import {XYPlot, MarkSeries, XAxis, YAxis, VerticalGridLines, HorizontalGridLines, LabelSeries} from 'react-vis';
+import ResultButton from '../Components/ResultButton';
 
 export default class ResultPage extends Component {
   render() {
@@ -18,7 +19,7 @@ export default class ResultPage extends Component {
     const WIDTH = 500;
     const HEIGHT = 500;
     return (
-      <div>
+      <div className="result">
         <XYPlot
         width={500}
         height={500}
@@ -42,6 +43,7 @@ export default class ResultPage extends Component {
             color="white"
             />
         </XYPlot>
+        <ResultButton />
       </div>
     )
   }
