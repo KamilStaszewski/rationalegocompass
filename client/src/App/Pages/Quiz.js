@@ -3,6 +3,7 @@ import QuizButtons from '../Components/QuizButtons';
 import QuizHeader from '../Components/QuizHeader';
 import QuizNextQuestionButton from '../Components/QuizNextQuestionButton';
 import QuizInputMultiplier from '../Components/QuizInputMultiplier';
+import ResultPage from './ResultPage';
 
 class Quiz extends Component {
   constructor(props){
@@ -59,19 +60,18 @@ class Quiz extends Component {
   }
 
   render() {
-    const { questions, index, disableButton, inputWeigth } = this.state;
-    console.log(this.state.scoreEgo)
+    const { questions, index, disableButton, inputWeigth, scoreEgo, scoreMind } = this.state;
     return (
       <div className="wrapper">
-        {questions.length ? (
-        <div className="quiz">
-          <QuizHeader questions={questions} index={index}/>
-          <QuizButtons answerYes={this.answerYes} answerNo={this.answerNo} disableButton={disableButton}/>
-          <QuizInputMultiplier onInputChange={this.onInputChange} inputWeigth={inputWeigth}/>
-          <QuizNextQuestionButton nextQuestion={this.nextQuestion}/>
-        </div>
+        {questions.length === index ? (
+          <ResultPage scoreEgo={scoreEgo} scoreMind={scoreMind}/>
         ) : (
-          null
+          <div className="quiz">
+            <QuizHeader questions={questions} index={index}/>
+            <QuizButtons answerYes={this.answerYes} answerNo={this.answerNo} disableButton={disableButton}/>
+            <QuizInputMultiplier onInputChange={this.onInputChange} inputWeigth={inputWeigth}/>
+            <QuizNextQuestionButton nextQuestion={this.nextQuestion}/>
+          </div>
         )
       }
       </div>
