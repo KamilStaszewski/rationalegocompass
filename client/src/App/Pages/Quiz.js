@@ -35,37 +35,39 @@ class Quiz extends Component {
   }
 
   answerYes = () => {
-    const { questions, index, scoreEgo, scoreMind } = this.state;
+    const { questions, index, scoreEgo, scoreMind, inputWeigth } = this.state;
     this.setState({
-      scoreEgo: scoreEgo + questions[index].egoYes,
-      scoreMind: scoreMind + questions[index].mindYes,
+      scoreEgo: scoreEgo + questions[index].egoYes * inputWeigth,
+      scoreMind: scoreMind + questions[index].mindYes * inputWeigth,
       disableButton: true
     })
   }
 
   answerNo = () => {
-    const { questions, index, scoreEgo, scoreMind } = this.state;
+    const { questions, index, scoreEgo, scoreMind, inputWeigth } = this.state;
     this.setState({
-      scoreEgo: scoreEgo - questions[index].egoYes,
-      scoreMind: scoreMind - questions[index].mindYes,
+      scoreEgo: scoreEgo - questions[index].egoNo * inputWeigth,
+      scoreMind: scoreMind - questions[index].mindNo * inputWeigth,
       disableButton: true
     })
   }
 
-  // onInputChange = (e) => {
-
-  // }
+  onInputChange = (e) => {
+    this.setState({
+      inputWeigth: e.target.value
+    })
+  }
 
   render() {
-    const { questions, index, disableButton } = this.state;
-    console.log(this.state.questions)
+    const { questions, index, disableButton, inputWeigth } = this.state;
+    console.log(this.state.scoreEgo)
     return (
       <div className="wrapper">
         {questions.length ? (
         <div className="quiz">
           <QuizHeader questions={questions} index={index}/>
           <QuizButtons answerYes={this.answerYes} answerNo={this.answerNo} disableButton={disableButton}/>
-          <QuizInputMultiplier />
+          <QuizInputMultiplier onInputChange={this.onInputChange} inputWeigth={inputWeigth}/>
           <QuizNextQuestionButton nextQuestion={this.nextQuestion}/>
         </div>
         ) : (

@@ -1,14 +1,15 @@
 import React from 'react'
 
-const QuizInputMultiplier = () => {
+const QuizInputMultiplier = ({onInputChange, inputWeight}) => {
   return (
     <div className="compass">
         <label htmlFor="volume" className="input-range">Jak istotna jest dla Ciebie ta kwestia?</label>
         <input type="range"
-            name='lala' 
-            min="0" 
+            name='compass' 
+            min="1" 
             max="3"
-            value={2}
+            value={inputWeight}
+            onChange={onInputChange}
              />
     </div>
   )
