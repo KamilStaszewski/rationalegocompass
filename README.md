@@ -1,25 +1,19 @@
-![](https://user-images.githubusercontent.com/22203423/45114111-63839a00-b14c-11e8-8b12-b39e00c36e2a.png)
+# React Express Example
 
-# Quiz app about Objectivsm 
+This project offers a simple example of how to set up a React project with Create React App and how to connect this app with an Express backend. React-Router is also used for routing.
 
-All questions are in Polish.
+## Prerequisites
+In order to run this project node.js and npm both need to have been installed.
 
-### Get started
-fork repo, then type in terminal: 
+## Deployment
+<ol>
+<li>Clone this repo</li>
+<li>Run npm start from react-express-example to start the Express app</li>
+<li>Run npm start from the client directory to start the React app</li>
+<li>Visit http://localhost:3000/</li>
+</ol>
 
-`npm i`
-
-then 
-
-`npm start`
-
-go to localhost:3000
-
-
-To do:
-- [ ] rwd
-- [ ] to connect results to database
-- [ ] more questions, categories
-- [ ] redux(main goal, learning now)
-
-
+## Built With
+* [React.js](https://reactjs.org/)
+* [Express.js](https://expressjs.com/)
+* [React-Router](https://reacttraining.com/react-router/core/guides/philosophy)

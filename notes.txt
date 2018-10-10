@@ -1,0 +1,6 @@
+1. zablokować przyciski po wybraniu tak / nie
+2. input range jako kontrolowany element, ogarnąć mnożenie
+3. chart,
+4. dodać proptypes?
+5. spróbować wyrównać poziomą / pionową linie w charcie
+6. na początku przy kliknieciu play renderuje sie result.js
