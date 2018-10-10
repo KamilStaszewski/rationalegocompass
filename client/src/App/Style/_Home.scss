@@ -1,9 +1,14 @@
-.result {
-    display: flex;
+.App {
     height: 100%;
+    display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    color: $fontColor;
+    
+    h1 {
+        font-size: 3em; 
+    }
 
     button {
         margin: 0.5em;

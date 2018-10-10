@@ -2,10 +2,26 @@ import React, { Component } from 'react';
 import '../../../node_modules/react-vis/dist/style.css';
 import {XYPlot, MarkSeries, XAxis, YAxis, VerticalGridLines, HorizontalGridLines, LabelSeries} from 'react-vis';
 import ResultButton from '../Components/ResultButton';
+import Quiz from '../Pages/Quiz';
 
 export default class ResultPage extends Component {
+  constructor(props) {
+    super(props)
+  
+    this.state = {
+       start: false
+    }
+  }
+
+  startAgain = () => {
+    this.setState({
+        start: true
+    })
+  }
+  
   render() {
     const {scoreEgo, scoreMind} = this.props
+    const { start } = this.state
     const myData = [
         {x: scoreEgo, y: scoreMind, label: `Ego: ${scoreEgo} Reason: ${scoreMind}`, style: {fontSize: 25, fontFamily: 'Pontano Sans', fontWeight: 900}} 
     ];
@@ -20,6 +36,10 @@ export default class ResultPage extends Component {
     const HEIGHT = 500;
     return (
       <div className="result">
+      {start ? 
+        <Quiz />
+        :
+        <div>
         <XYPlot
         width={500}
         height={500}
@@ -43,7 +63,9 @@ export default class ResultPage extends Component {
             color="white"
             />
         </XYPlot>
-        <ResultButton />
+        <ResultButton startAgain={this.startAgain}/>
+        </div>
+      }
       </div>
     )
   }

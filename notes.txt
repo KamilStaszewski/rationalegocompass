@@ -3,3 +3,4 @@
 3. chart,
 4. dodać proptypes?
 5. spróbować wyrównać poziomą / pionową linie w charcie
+6. na początku przy kliknieciu play renderuje sie result.js

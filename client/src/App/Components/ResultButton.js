@@ -1,9 +1,9 @@
 import React from 'react'
 
-const ResultButton = () => {
+const ResultButton = ({startAgain}) => {
   return (
     <div className="result__button">
-        <button>Spróbuj jeszcze raz</button>     
+        <button onClick={startAgain}>Spróbuj jeszcze raz</button>     
     </div>
   )
 }
