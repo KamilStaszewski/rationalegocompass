@@ -14,4 +14,9 @@
         color: $fontColor;
         border-radius: 0.5em;
     }
+
+    .result__button {
+        display: flex;
+        justify-content: center;
+    }
 }
