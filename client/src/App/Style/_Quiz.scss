@@ -8,6 +8,7 @@
     justify-content: center;
     align-items: center;
     color: #fff;
+    font-family: 'Lato', sans-serif;
 }
 
 .quiz {
@@ -19,27 +20,30 @@
     flex-direction: column;
 
     @media #{$tablet} {
-        height: 70%;
-        width: 70%;
+        height: 80%;
+        width: 80%;
         background: $quizbackground;
         border-radius: 0.5em;
     }
 
-
-
-
     .quiz__header {
         padding: 1em;
-        font-size: 1.5em;
+        font-size: 1.8em;
         text-align: center;
 
+        @media #{$tablet} {
+            font-size: 2.5em;
+            padding: 0.5em;
+        }
+        
+
         @media #{$desktop} {
-            font-size: 3.5em;
+            font-size: 3.2em;
         }
     }
 
     .quiz__buttons {
-        padding: 0.5em;
+        padding: 0.2em;
 
         button {
             margin: 0.5em;
@@ -49,6 +53,12 @@
             border: 2px solid #94DBE0;
             color: $fontColor;
             border-radius: 0.5em;
+
+            @media #{$tablet} {
+                font-size: 1.7em;
+                margin: 0.3em;
+            }
+
         }
 
         button:disabled,
@@ -66,20 +76,70 @@
         padding: 1em;
         font-size: 1.5em;
 
-        // label {
-        //     text-align: center;
-        //     padding: 0.5em;
-        // }
+        label {
+            text-align: center;
+            padding: 1em;
+            font-size: 1em;
+
+            @media #{$tablet} {
+                font-size: 1.3em;
+            }
+        }
     }
 
     .quiz__nextquestion {
         padding: 1em;
 
         button {
-            margin: 1em;
             font-size: 1em;
-            padding: 0.1em;
+            padding: 0.5em;
+            background: none;
+            border: 2px solid #94DBE0;
+            color: $fontColor;
+            border-radius: 0.5em;
+
+            @media #{$tablet} {
+                font-size: 1.7em;
+            }
         }
     }
+
+    input {
+        font-size: 20px;
+        font-weight: 700;
+        font-family: 'Donegal One', sans-serif;
+        background: none;
+      }
+      
+      
+      input[type=range]{
+        -webkit-appearance: none;
+      }
+      
+      input[type=range]::-webkit-slider-runnable-track {
+        width: 300px;
+        height: 5px;
+        background: #94DBCC;
+        border: none;
+        border-radius: 3px;
+      }
+      
+      input[type=range]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        border: none;
+        height: 16px;
+        width: 16px;
+        border-radius: 50%;
+        background: #185E7F;
+        margin-top: -4px;
+      }
+      
+      input[type=range]:focus {
+        outline: none;
+      }
+      
+      input[type=range]:focus::-webkit-slider-runnable-track {
+        background: #94ffff;
+      }
 
 }
